@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@layer utilities{
+    .header-btns{@apply px-6 py-2.5 text-center rounded-sm font-bold text-[12px] uppercase cursor-pointer tracking-widest;}
+}
