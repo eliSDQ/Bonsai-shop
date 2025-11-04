@@ -6,8 +6,11 @@
 }
 
 @layer utilities{
-    .header-btns{@apply px-6 py-2.5 text-center rounded-sm font-bold text-[12px] uppercase cursor-pointer tracking-widest;};
-    .section-titles{@apply uppercase font-medium tracking-wider}
+    .header-btns{@apply px-6 py-2.5 text-center rounded-sm font-bold text-[12px] uppercase cursor-pointer tracking-widest;}
+    .section-titles{@apply uppercase font-medium tracking-wider;}
+    .features{@apply stroke-emerald-500 w-4 h-4}
+    .feature-container{@apply flex gap-1 items-baseline}
+    
 }
 @theme{
      --font-amerigo:"amerigo";
