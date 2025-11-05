@@ -1,12 +1,18 @@
+let $= document
+let sec2= $.getElementById("body-sec2")
+let sec3=$.getElementById("body-sec3")
 let packsObj={
     starter:{title:"Starter",price:24,desc:"Ideal for freelancers and contractors just starting out.",
         features:["Ideal for freelancers and contractors just starting out.","Unlimited Clients & Projects","Invoicing & Payments","Proposals & Contracts","Tasks & Time Tracking","Client CRM","Expense Tracking","Up to 5 Project Collaborators"],popular:null},
     Professional:{title:"Professional",price:39,desc:"Everything a growing independent business needs to thrive.",features:["Ideal for freelancers and contractors just starting out.","Unlimited Clients & Projects","Invoicing & Payments","Proposals & Contracts","Tasks & Time Tracking","Client CRM","Expense Tracking","Up to 5 Project Collaborators","Proposals & Contracts"],popular:"most popular"},
     Business:{title:"Business",price:79,desc:"The perfect package for small businesses and agencies.",features:["Ideal for freelancers and contractors just starting out.","Unlimited Clients & Projects","Invoicing & Payments","Tasks & Time Tracking","3 Team Seats (additional seats $9/month)","Expense Tracking","Up to 5 Project Collaborators","Proposals & Contracts","Proposals & Contracts","Proposals & Contracts","Proposals & Contracts"],popular:null}
 }
+let plans={
+    Collaborators:{title:"Collaborators",desc:"Invite other users to specific projects for limited access and functionality.",price:"free",det:false},
+    Partners:{title:"Partners",desc:"Invite other users for full account access and company management.",price:"$9",det:false},
+    BonsaiTax:{title:"Bonsai Tax",desc:"Track expenses, identify write-offs, and estimate quarterly taxes easily.",price:"$10",det:true}
+}
 
-let $= document
-let sec2= $.getElementById("body-sec2")
 
 Object.values(packsObj).forEach(elem => {
     let newPack=`<div class="text-gray-700 w-93 h-230 p-12 border-gray-300 border-[0.5px] rounded-sm shadow-md shadow-gray-500">
@@ -44,3 +50,23 @@ Object.values(packsObj).forEach(elem => {
               console.log(newPack)
               sec2.insertAdjacentHTML("beforeend",newPack)
 });
+
+
+
+
+Object.values(plans).forEach(elem=>{
+        let newPlan=`
+          <div class="flex justify-between items-center w-full h-39 shadow-[0_0_2px_rgba(0,0,0,0.1)] shadow-gray-200 rounded-md pl-10 pr-30">
+          <div>
+          <span class="text-2xl font-medium">${elem.title}</span>
+          <p class="font-light">${elem.desc}</p>
+        </div>
+        <div>
+          ${elem.price=="free" ? `<h3 class="capitalize text-4xl font-semibold">free</h3>`:
+          `<h3 class="capitalize text-5xl font-semibold">${elem.price}</h3>
+          <h6 class="uppercase text-[13px] pt-2">/month</h6>`
+          }</div></div>
+  `
+          
+          sec3.insertAdjacentHTML("beforeend",newPlan)
+})
