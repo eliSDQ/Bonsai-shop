@@ -14,3 +14,10 @@
 @theme{
      --font-amerigo:"amerigo";
 }
+#article-ul > li {
+  @apply cursor-pointer hover:text-emerald-500 w-fit select-none;
+}
+
+li>p{
+ @apply cursor-auto  text-gray-600 text-base font-normal pt-4
+}
