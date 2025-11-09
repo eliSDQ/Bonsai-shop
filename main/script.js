@@ -110,14 +110,14 @@ let footerArr = [
 let dropdItemsObj = { sub: "Client CRM", drops: ["Website Proposal Template", "Digital Marketing Proposal Template", "Social Media Marketing Proposal", "Graphic Design Proposal", "Freelance Proposal Template", "SEO Proposal Template"] }
 
 for (i = 0; i < footerArr.length; i += 2) {
-  let col = `<div class="grid">`
+  let col = `<div class="grid auto-rows-min">`
   for (j = i; j < i + 2 && j < footerArr.length; j++) {
     let item = footerArr[j]
-    col += `<div class="space-y-4 text-gray-700 p-8" id="${item.dropdItems ? "true-drop" : ""}">
+    col += `<div class="space-y-5 text-gray-700 p-8">
           <h4 class="text-lg font-semibold">
             ${item.title}
           </h4>
-          <div class="flex flex-col font-light items-start space-y-1.5 h-fit max-w-full">
+          <div class="flex flex-col font-light items-start space-y-1.5 h-fit max-w-full" ${item.dropdItems ? 'data-dropdown="true"' : ""}>
           ${item.simpItem.map(i =>
       `<a href="#">${i}</a>`
     ).join("")}
@@ -128,7 +128,7 @@ for (i = 0; i < footerArr.length; i += 2) {
   footer.insertAdjacentHTML("beforeend", col)
 }
 
-let trueElem = $.getElementById("true-drop")
+let trueElem = $.querySelector("[data-dropdown='true']")
 let newdrop = $.createElement("div")
 newdrop.classList.add("select-none")
 let insideDiv = `<div class="flex gap-0.5 cursor-pointer">
@@ -147,14 +147,14 @@ let insideDiv = `<div class="flex gap-0.5 cursor-pointer">
                 d="m19.5 8.25-7.5 7.5-7.5-7.5"
               />
             </svg></div>`
-newdrop.addEventListener("click", (t) => {
+newdrop.addEventListener("click", () => {
   if (newdrop.classList.contains("des")) {
     newdrop.classList.remove("des")
     newdrop.removeChild(newdrop.lastChild)
   } else {
     newdrop.classList.add("des")
-    newdrop.insertAdjacentHTML("beforeend", `<div class="space-y-0.5 ml-2 font-light text-base">
-            ${dropdItemsObj.drops.map(i => `<a href="#">${i}
+    newdrop.insertAdjacentHTML("beforeend", `<div class="space-y-1 ml-2 pt-1">
+            ${dropdItemsObj.drops.map(i => `<a href="#" class="inline-block">${i}
             </a>`).join("")}
             </div>`)
   }
