@@ -20,7 +20,7 @@ let plans = {
 
 
 Object.values(packsObj).forEach(elem => {
-  let newPack = `<div class="text-gray-700 w-93 h-230 p-12 border-gray-300 border-[0.5px] rounded-sm shadow-md shadow-gray-500">
+  let newPack = `<div class=" w-93 h-230 p-12 bg-white/84 border-gray-200 border-[0.5px] rounded-sm">
             <h3 class="text-2xl font-semibold ">${elem.title}</h3>
             <p class="mt-1 text-sm">${elem.desc}</p>
             <div class="flex mt-6  gap-3">
@@ -50,7 +50,7 @@ Object.values(packsObj).forEach(elem => {
                     </li>`
   ).join("")}
                 </ul>
-                <button class="bg-emerald-500 uppercase font-semibold rounded-md w-full h-15 my-10 text-white cursor-pointer">start free</button>
+                <button class="bg-emerald-500 uppercase font-semibold rounded-md w-full h-15 my-10 text-white cursor-pointer hover:bg-emerald-600">start free</button>
               `
   sec2.insertAdjacentHTML("beforeend", newPack)
 });
@@ -60,7 +60,7 @@ Object.values(packsObj).forEach(elem => {
 
 Object.values(plans).forEach(elem => {
   let newPlan = `
-          <div class="flex justify-between items-center w-full h-39 shadow-[0_0_2px_rgba(0,0,0,0.1)] shadow-gray-200 rounded-md pl-10 pr-30">
+          <div class=" bg-white flex justify-between items-center w-full h-40 shadow-[0_0_30px_rgba(0,0,0,0.1)] shadow-gray-100 rounded-md pl-10 pr-30">
           <div>
           <span class="text-2xl font-medium">${elem.title}</span>
           <p class="font-light">${elem.desc}</p>
@@ -114,7 +114,7 @@ function createLinks(item){
   let elems= item.simpItem.map(i =>
       `<a href="#">${i}</a>`
     ).join("")
-    return`<div class="space-y-5 text-gray-700 p-8 xl:pl-32">
+    return`<div class="space-y-5  p-8 xl:pl-32">
           <h4 class="text-lg font-semibold">
             ${item.title}
           </h4>
@@ -161,6 +161,3 @@ newdrop.addEventListener("click", () => {
 })
 newdrop.innerHTML = insideDiv
 trueElem.append(newdrop)
-
-
-
