@@ -109,23 +109,23 @@ let footerArr = [
 ]
 let dropdItemsObj = { sub: "Client CRM", drops: ["Website Proposal Template", "Digital Marketing Proposal Template", "Social Media Marketing Proposal", "Graphic Design Proposal", "Freelance Proposal Template", "SEO Proposal Template"] }
 
-for (i = 0; i < footerArr.length; i += 2) {
-  let col = `<div class="grid auto-rows-min">`
-  for (j = i; j < i + 2 && j < footerArr.length; j++) {
-    let item = footerArr[j]
-    col += `<div class="space-y-5 text-gray-700 p-8">
+
+function createLinks(item){
+  let elems= item.simpItem.map(i =>
+      `<a href="#">${i}</a>`
+    ).join("")
+    return`<div class="space-y-5 text-gray-700 p-8 xl:pl-32">
           <h4 class="text-lg font-semibold">
             ${item.title}
           </h4>
           <div class="flex flex-col font-light items-start space-y-1.5 h-fit max-w-full" ${item.dropdItems ? 'data-dropdown="true"' : ""}>
-          ${item.simpItem.map(i =>
-      `<a href="#">${i}</a>`
-    ).join("")}
-          </div>
+          ${elems}</div>
         </div>`
-  }
-  col += `</div>`
-  footer.insertAdjacentHTML("beforeend", col)
+}
+
+for(i=0;i<footerArr.length;i+=2){
+  let twoInCol= footerArr.slice(i,i+2).map(createLinks).join("")
+  footer.insertAdjacentHTML("beforeend", `<div class="grid auto-rows-min">${twoInCol}</div>`)
 }
 
 let trueElem = $.querySelector("[data-dropdown='true']")

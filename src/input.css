@@ -11,6 +11,9 @@
     .feature-container{@apply flex gap-1 items-baseline}
     
 }
+@layer base{
+  body{@apply text-gray-600}
+}
 @theme{
      --font-amerigo:"amerigo";
 }
