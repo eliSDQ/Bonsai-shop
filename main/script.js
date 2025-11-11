@@ -3,6 +3,8 @@ let sec2 = $.getElementById("body-sec2")
 let sec3 = $.getElementById("body-sec3")
 let article = $.getElementById("article-ul")
 let footer = $.getElementById("footer-sec")
+let workMenu = $.getElementById("Workflow-menu")
+
 
 let packsObj = {
   starter: {
@@ -161,3 +163,41 @@ newdrop.addEventListener("click", () => {
 })
 newdrop.innerHTML = insideDiv
 trueElem.append(newdrop)
+
+let workFlowData=[
+  {title:"Invoices",desc:" Look professional, win more clients and manage your business from one place",svg:null},
+  {title:"Invoices",desc:" Look professional, win more clients and manage your business from one place manage your business from one place",svg:`<svg
+  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"  />   </svg>`},
+  {title:"Invoices",desc:" Look professional, win more clients and manage your business from one placemanage your business from one place",svg:`<svg
+  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"  />   </svg>`},
+  {title:"Invoices",desc:" Look professional, win more clients and manage your business from one place manage your business from one place",svg:null},
+  {title:"Invoices",desc:" Look professional, win more clients and manage your business from one place",svg:`<svg
+  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"  />   </svg>`},
+  {title:"Invoices",desc:" Look professional, win more clients and manage your business from one place manage your business from one place",svg:`<svg
+  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"  />   </svg>`},
+  {title:"Invoices",desc:" Look professional, win more clients and manage your business from one place",svg:`<svg
+  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"  />   </svg>`},
+  {title:"Invoices",desc:" Look professional, win more clients and manage your business from one place",svg:null},                    
+]
+
+function createWorkElem(item){
+  return`<div class="p-6 space-y-4 flex gap-1.5">
+                            ${item.svg ? item.svg:""}
+                        <div class="space-y-2 w-62 ${item.svg?"":`pl-7`}">
+                          <h3>${item.title}</h3>
+                          <p class="text-[12px]">
+                          ${item.desc}
+                        </p>
+                        </div> 
+                      </div>`
+}
+
+for(i=0;i<workFlowData.length;i+=4){
+  let fourInCol=workFlowData.slice(i,i+4).map(createWorkElem).join("")
+  workMenu.insertAdjacentHTML("beforeend",`<div class="h-full">${fourInCol}</div>`)
+}

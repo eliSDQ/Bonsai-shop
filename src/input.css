@@ -13,10 +13,11 @@
       font-family: "amerigo";
       @apply text-2xl text-black}
       .bg-change{
-        @apply hover:bg-[#FAFAFA] p-[38px] cursor-pointer
+        @apply hover:bg-[#FAFAFA] py-11 pl-[37px] cursor-pointer
       }
     #pro-title:hover{@apply text-black}
-
+      #Workflow:hover svg{@apply inline}
+      #Workflow:hover #Workflow-menu{@apply opacity-100}
     #temp-title:hover{@apply text-black}
 }
 @layer base{
