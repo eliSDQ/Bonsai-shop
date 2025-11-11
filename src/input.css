@@ -9,7 +9,15 @@
     .header-btns{@apply px-6 py-2.5 text-center rounded-sm font-bold text-[12px] uppercase cursor-pointer tracking-widest;}
     .section-titles{@apply uppercase font-medium tracking-wider;}
     .feature-container{@apply flex gap-1 items-baseline}
-    
+    .in-panel-titles{
+      font-family: "amerigo";
+      @apply text-2xl text-black}
+      .bg-change{
+        @apply hover:bg-[#FAFAFA] p-[38px] cursor-pointer
+      }
+    #pro-title:hover{@apply text-black}
+
+    #temp-title:hover{@apply text-black}
 }
 @layer base{
   body{@apply text-gray-600}

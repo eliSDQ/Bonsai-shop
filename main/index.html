@@ -8,7 +8,7 @@
   </head>
   <body class="bg-[#FAFAFA] min-h-screen min-w-screen container flex justify-center relative">
     <div class="w-3/4 min-h-screen px-3">
-      <nav class="h-19 py-5 bg-white fixed z-40 right-0 top-0 w-screen">
+      <nav class="h-20 py-5 bg-white fixed z-40 right-0 top-0 w-screen">
         <div class="grid grid-cols-3 w-3/4 mx-auto xl:pl-7">
           <div>
           <a href="#">
@@ -19,9 +19,11 @@
             />
           </a>
         </div>
-        <div class="flex justify-between items-center ">
-          <div class="flex items-center gap-1.5 cursor-pointer">
-            Products
+        <div class="flex justify-between items-center">
+          <div class="relative flex flex-col items-center group">
+            <div id="pro-title" class="py-3 flex items-center gap-1.5 justify-center cursor-pointer">
+              <h3>
+              Products</h3>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="none"
@@ -36,8 +38,27 @@
                 d="m19.5 8.25-7.5 7.5-7.5-7.5"
               />
             </svg>
+            </div>
+            <div id="pro-subTitles" class=" absolute top-0 mt-12  w-88 h-135  bg-white shadow-gray-400 shadow-lg opacity-0 hidden group-hover:opacity-100 group-hover:block ">
+              
+                <div class="bg-change">
+                  <h3 class="in-panel-titles">Bonsai Workflow</h3>
+                  <p>Look professional, win more clients and manage your business from one place</p>
+                </div>
+                <div class="h-px bg-gray-300"></div>
+                <div class="bg-change">
+                  <h3 class="in-panel-titles">Bonsai Tax</h3>
+                  <p>Look professional, win more clients and manage your business from one place</p>
+                </div>
+                <div class="h-px bg-gray-300"></div>
+                <div class="bg-change">
+                  <h3 class="in-panel-titles">Bonsai Cash</h3>
+                  <p>Look professional, win more clients and manage your business from one place</p>
+                </div>                
+              </div>
           </div>
-          <div class="flex items-center gap-1.5 cursor-pointer">
+          
+          <div class="py-3 flex items-center gap-1.5 cursor-pointer"id="temp-title">
             Templates
             <svg
               xmlns="http://www.w3.org/2000/svg"
@@ -54,8 +75,8 @@
               />
             </svg>
           </div>
-          <div><a href="#">Pricing</a></div>
-          <div><a href="#">Reviwes</a></div>
+          <div class="py-3"><a href="#">Pricing</a></div>
+          <div class="py-3"><a href="#">Reviwes</a></div>
         </div>
         <div class="flex justify-end gap-4 items-center">
           <span
@@ -71,7 +92,7 @@
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" class="absolute -z-50 w-400 h-400 -right-50 -top-150">
   <path fill="#B2DFDB" d="M57.4,-68.3C73.5,-54.9,85.1,-36,87.1,-16.5C89.2,3,81.9,23,70.8,39.8C59.8,56.6,45.1,70.1,29.2,72.6C13.2,75.2,-4,66.7,-22.4,60.4C-40.8,54.2,-60.3,50.2,-66.5,38.8C-72.6,27.4,-65.4,8.6,-57.7,-5.9C-50.1,-20.4,-42.2,-30.6,-32.5,-45.1C-22.8,-59.6,-11.4,-78.5,4.6,-84C20.7,-89.5,41.3,-81.7,57.4,-68.3Z" transform="translate(100 100)"/>
 </svg>
-      <main class="mt-30 min-h-screen mx-auto">
+      <main class="mt-50 min-h-screen mx-auto">
         <section class="flex items-center justify-center h-40 gap-18">
           <h2 class=" text-[38px] font-amerigo font-medium">
             Plans & Pricing
