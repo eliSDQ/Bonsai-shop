@@ -4,6 +4,7 @@ let sec3 = $.getElementById("body-sec3")
 let article = $.getElementById("article-ul")
 let footer = $.getElementById("footer-sec")
 let workMenu = $.getElementById("Workflow-menu")
+let temps = $.getElementById("temps")
 
 
 let packsObj = {
@@ -201,3 +202,49 @@ for(i=0;i<workFlowData.length;i+=4){
   let fourInCol=workFlowData.slice(i,i+4).map(createWorkElem).join("")
   workMenu.insertAdjacentHTML("beforeend",`<div class="h-full">${fourInCol}</div>`)
 }
+
+let tempItems=[
+  {title:"contaract templates",svg:`<svg
+  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker","social media managment contract template","free contract maker","free contract maker"],more:true},
+   {title:"contaract templates",svg:`<svg
+  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker","social media managment contract template","free contract maker","free contract maker"],more:true},
+   {title:"contaract templates",svg:`<svg
+  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker","social media managment contract template","free contract maker","free contract maker"],more:true},
+   {title:"contaract templates",svg:`<svg
+  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker","social media managment contract template","free contract maker","free contract maker"],more:true},
+   {title:"contaract templates",svg:`<svg
+  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker","social media managment contract template","free contract maker","free contract maker"],more:true},
+  {title:"scope of work templates",svg:`<svg
+  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker","social media managment contract template","free contract maker","free contract maker"],more:true},
+  {title:"contaract templates",svg:`<svg
+  xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker","social media managment contract template","free contract maker","free contract maker"],more:false},
+]
+
+tempItems.forEach((temp)=>{
+  let tempCol=`<div class="flex items-center justify-center gap-1.5">
+                    ${temp.svg}
+                  <h4 class="capitalize text-sm whitespace-nowrap">${temp.title}</h4>
+                  </div>`
+
+      temps.insertAdjacentHTML("beforeend",`<div class="hover:bg-[#FAFAFA] tempItems">${tempCol}
+                    <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="none"
+                    viewBox="0 0 24 24"
+                    stroke-width="2.5"
+                    stroke="currentColor"
+                    class="size-6 self-center hidden">
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
+                   </svg>
+                    </div>`)          
+})

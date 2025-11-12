@@ -70,7 +70,7 @@
                     />
                   </svg>
                   <div id="Workflow-menu"
-                    class="w-160 h-134 absolute top-0 left-88 bg-white grid grid-cols-2 opacity-0">
+                    class="w-160 h-134 absolute top-0 left-88 bg-white grid grid-cols-2 opacity-0 transition-opacity duration-200 ease-in">
                   </div>
                 </div>
                 <div class="h-px bg-gray-300"></div>
@@ -91,12 +91,13 @@
                 </div>
               </div>
             </div>
-
-            <div
+            <div class="relative flex flex-col items-center group">
+              <div
               class="py-3 flex items-center gap-1.5 cursor-pointer"
-              id="temp-title"
-            >
-              Templates
+              id="temp-title">
+              
+              <h3>Templates</h3>
+              
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 fill="none"
@@ -111,6 +112,10 @@
                   d="m19.5 8.25-7.5 7.5-7.5-7.5"
                 />
               </svg>
+            </div>
+            <div class="hidden-temp-menu w-66 bg-white -left-35" id="temps">
+                </div>
+                <div class="hidden-temp-menu w-122  bg-amber-800/30 left-31"></div>
             </div>
             <div class="py-3"><a href="#">Pricing</a></div>
             <div class="py-3"><a href="#">Reviwes</a></div>
