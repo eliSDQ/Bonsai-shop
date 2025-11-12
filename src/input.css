@@ -22,6 +22,7 @@
       #Workflow:hover svg{@apply inline}
       #Workflow:hover #Workflow-menu{@apply opacity-100}
     #temp-title:hover{@apply text-black}
+    #item-bg:hover{@apply scale-105 transition-transform duration-200 ease-in-out}
 
     
 }
