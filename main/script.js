@@ -5,7 +5,7 @@ let article = $.getElementById("article-ul")
 let footer = $.getElementById("footer-sec")
 let workMenu = $.getElementById("Workflow-menu")
 let temps = $.getElementById("temps")
-
+let secondList=$.getElementById("second-hidden-list")
 
 let packsObj = {
   starter: {
@@ -206,34 +206,51 @@ for(i=0;i<workFlowData.length;i+=4){
 let tempItems=[
   {title:"contaract templates",svg:`<svg
   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
-  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker","social media managment contract template","free contract maker","free contract maker"],more:true},
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker11","social media managment contract template","free contract maker","free contract maker"],more:true},
    {title:"contaract templates",svg:`<svg
   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
-  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker","social media managment contract template","free contract maker","free contract maker"],more:true},
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker22","social media managment contract template","free contract maker","free contract maker"],more:true},
    {title:"contaract templates",svg:`<svg
   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
-  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker","social media managment contract template","free contract maker","free contract maker"],more:true},
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker33","social media managment contract template","free contract maker","free contract maker"],more:true},
    {title:"contaract templates",svg:`<svg
   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
-  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker","social media managment contract template","free contract maker","free contract maker"],more:true},
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker44","social media managment contract template","free contract maker","free contract maker"],more:true},
    {title:"contaract templates",svg:`<svg
   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
-  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker","social media managment contract template","free contract maker","free contract maker"],more:true},
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker55","social media managment contract template","free contract maker","free contract maker"],more:true},
   {title:"scope of work templates",svg:`<svg
   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
-  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker","social media managment contract template","free contract maker","free contract maker"],more:true},
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker66","social media managment contract template","free contract maker","free contract maker"],more:true},
   {title:"contaract templates",svg:`<svg
   xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 self-start pt-1" > 
-  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker","social media managment contract template","free contract maker","free contract maker"],more:false},
+  <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker77","social media managment contract template","free contract maker","free contract maker"],more:false},
 ]
+
+let bgArr=["../src/images/; (1).jpg ","../src/images/; (2).jpg ","../src/images/download (1).jpg","../src/images/download (2).jpg"]
+function hoverFunc(temp){
+    let menuStructure=`
+                  <h2 class=" text-2xl font-amerigo">${temp.listTitle}</h2>
+                  <div class="w-full h-79 bg-white space-y-2.5 ">
+                  ${temp.list.map((i,index)=>`<div id="item-bg" class="cursor-pointer relative h-18 w-102 bg-white rounded-sm border-gray-400/45 border-[1px] capitalize text-sm">
+                      <img class="opacity-50 w-full h-full object-cover" src="${bgArr[index]}"alt="">
+                      <div class="absolute inset-0 flex items-center justify-center"><h5>${i}</h5></div>
+                      </div>`).join("")}
+                      </div>
+                      ${temp.more?`<a href="#" class="text-emerald-500 capitalize text-center text-sm block font-semibold">see all templates</a>`:""}`
+    secondList.innerHTML=""
+    secondList.insertAdjacentHTML("beforeend",menuStructure)
+}
 
 tempItems.forEach((temp)=>{
   let tempCol=`<div class="flex items-center justify-center gap-1.5">
                     ${temp.svg}
                   <h4 class="capitalize text-sm whitespace-nowrap">${temp.title}</h4>
                   </div>`
+  let tempDiv=$.createElement("div")
+  tempDiv.className="hover:bg-[#FAFAFA] tempItems"
 
-      temps.insertAdjacentHTML("beforeend",`<div class="hover:bg-[#FAFAFA] tempItems">${tempCol}
+      tempDiv.insertAdjacentHTML("beforeend",`${tempCol}
                     <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -245,6 +262,8 @@ tempItems.forEach((temp)=>{
                       stroke-linecap="round"
                       stroke-linejoin="round"
                       d="m8.25 4.5 7.5 7.5-7.5 7.5"/>
-                   </svg>
-                    </div>`)          
+                   </svg>`) 
+                   tempDiv.addEventListener("mouseenter",()=>{hoverFunc(temp)})
+                   temps.append(tempDiv)   
+                        
 })
