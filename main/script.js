@@ -6,14 +6,19 @@ let footer = $.getElementById("footer-sec")
 let workMenu = $.getElementById("Workflow-menu")
 let temps = $.getElementById("temps")
 let secondList=$.getElementById("second-hidden-list")
+let switchBtn=$.getElementById("switch-btn")
+let circle=$.getElementById("circle")
+let year=$.getElementById("year")
+let month=$.getElementById("month")
+
 
 let packsObj = {
   starter: {
     title: "Starter", price: 24, desc: "Ideal for freelancers and contractors just starting out.",
-    features: ["Ideal for freelancers and contractors just starting out.", "Unlimited Clients & Projects", "Invoicing & Payments", "Proposals & Contracts", "Tasks & Time Tracking", "Client CRM", "Expense Tracking", "Up to 5 Project Collaborators"], popular: null
+    features: ["Ideal for freelancers and contractors just starting out.", "Unlimited Clients & Projects", "Invoicing & Payments", "Proposals & Contracts", "Tasks & Time Tracking", "Client CRM", "Expense Tracking", "Up to 5 Project Collaborators"], popular: false
   },
-  Professional: { title: "Professional", price: 39, desc: "Everything a growing independent business needs to thrive.", features: ["Ideal for freelancers and contractors just starting out.", "Unlimited Clients & Projects", "Invoicing & Payments", "Proposals & Contracts", "Tasks & Time Tracking", "Client CRM", "Expense Tracking", "Up to 5 Project Collaborators", "Proposals & Contracts"], popular: "most popular" },
-  Business: { title: "Business", price: 79, desc: "The perfect package for small businesses and agencies.", features: ["Ideal for freelancers and contractors just starting out.", "Unlimited Clients & Projects", "Invoicing & Payments", "Tasks & Time Tracking", "3 Team Seats (additional seats $9/month)", "Expense Tracking", "Up to 5 Project Collaborators", "Proposals & Contracts", "Proposals & Contracts", "Proposals & Contracts", "Proposals & Contracts"], popular: null }
+  Professional: { title: "Professional", price: 39, desc: "Everything a growing independent business needs to thrive.", features: ["Ideal for freelancers and contractors just starting out.", "Unlimited Clients & Projects", "Invoicing & Payments", "Proposals & Contracts", "Tasks & Time Tracking", "Client CRM", "Expense Tracking", "Up to 5 Project Collaborators", "Proposals & Contracts"], popular:true },
+  Business: { title: "Business", price: 79, desc: "The perfect package for small businesses and agencies.", features: ["Ideal for freelancers and contractors just starting out.", "Unlimited Clients & Projects", "Invoicing & Payments", "Tasks & Time Tracking", "3 Team Seats (additional seats $9/month)", "Expense Tracking", "Up to 5 Project Collaborators", "Proposals & Contracts", "Proposals & Contracts", "Proposals & Contracts", "Proposals & Contracts"], popular: false }
 }
 let plans = {
   Collaborators: { title: "Collaborators", desc: "Invite other users to specific projects for limited access and functionality.", price: "free", det: false },
@@ -23,8 +28,9 @@ let plans = {
 
 
 Object.values(packsObj).forEach(elem => {
-  let newPack = `<div class=" w-93 h-230 p-12 bg-white/84 border-gray-200 border-[0.5px] rounded-sm">
-            <h3 class="text-2xl font-semibold ">${elem.title}</h3>
+  let newPack = `<div class="${elem.popular?`relative`:""} overflow-hidden w-93 h-230 p-12 bg-white/84 border-gray-300 border-[0.5px] rounded-sm">
+            ${elem.popular?` <div class="absolute rotate-45 top-12 left-38 font-semibold text-lg  w-70 h-10 bg-emerald-500 uppercase text-white text-center pt-1">most popular</div>`:""}
+            <h3 class="text-2xl font-semibold">${elem.title}</h3>
             <p class="mt-1 text-sm">${elem.desc}</p>
             <div class="flex mt-6  gap-3">
               <span class="text-3xl font-semibold">$</span>
@@ -227,7 +233,7 @@ let tempItems=[
   <path  stroke-linecap="round" stroke-linejoin="round"  d="M12 6v6h4.5m4.5 0a9 9 0 1 1-18 0 9 9 0 0 1 18 0Z"/></svg>`,listTitle:"Featured Contract Templates",list:["free contract maker77","social media managment contract template","free contract maker","free contract maker"],more:false},
 ]
 
-let bgArr=["../src/images/; (1).jpg ","../src/images/; (2).jpg ","../src/images/download (1).jpg","../src/images/download (2).jpg"]
+let bgArr=["../src/images/mini-bg (1).jpg ","../src/images/mini-bg (2).jpg ","../src/images/mini-bg (3).jpg ","../src/images/mini-bg (4).jpg ",]
 function hoverFunc(temp){
     let menuStructure=`
                   <h2 class=" text-2xl font-amerigo">${temp.listTitle}</h2>
@@ -266,4 +272,18 @@ tempItems.forEach((temp)=>{
                    tempDiv.addEventListener("mouseenter",()=>{hoverFunc(temp)})
                    temps.append(tempDiv)   
                         
+})
+
+switchBtn.addEventListener("click",(e)=>{
+  e.preventDefault()
+  if(year.classList.contains("off")){
+    circle.classList.add("translate-x-[18px]")
+    month.classList.add("off")
+    year.classList.remove("off")
+  }else{
+    circle.classList.remove("translate-x-[18px]")
+    year.classList.add("off")
+    month.classList.remove("off")
+  }
+
 })
