@@ -12,4 +12,4 @@
 
 .env
 main/style.css
-node-module/
+node_modules/
