@@ -11,6 +11,7 @@ let switchBtn=$.getElementById("switch-btn")
 let circle=$.getElementById("circle")
 let year=$.getElementById("year")
 let month=$.getElementById("month")
+let fixedNav=$.getElementById("fixednav")
 
 
 // Navbar :
@@ -116,6 +117,12 @@ tempItems.forEach((temp)=>{
                    temps.append(tempDiv)                          
 })
 
+window.addEventListener("scroll",()=>{
+  if(window.scrollY>100){
+    fixedNav.classList.add("bg-white")
+  }else{fixedNav.classList.remove("bg-white")}
+})
+
 
 // Main > Sec 1+2 :
 let packsArr = [
@@ -134,7 +141,7 @@ function createSec2(isYear){
               `<div class="flex mt-6  gap-3">
               <span class="text-3xl font-semibold">$</span><h2 class="text-6xl font-bold ">${elem.MY.month}</h2><span class="uppercase text-2xl self-end">/month</span></div>`
 
-  let newPack = `<div class="${elem.popular?`relative`:""} overflow-hidden w-93 h-230 p-12 bg-white/84 border-gray-300 border-[0.5px] rounded-sm">
+  let newPack = `<div class="${elem.popular?`relative`:""} overflow-hidden lg:w-93 w-full h-230 p-12 bg-white/84 border-gray-300 border-[0.5px] rounded-sm">
             ${elem.popular?` <div class="absolute rotate-45 top-12 left-38 font-semibold text-lg  w-70 h-10 bg-emerald-500 uppercase text-white text-center pt-1">most popular</div>`:""}
             <h3 class="text-2xl font-semibold">${elem.title}</h3>
             <p class="mt-1 text-sm">${elem.desc}</p>
@@ -189,7 +196,7 @@ let plans = {
 }
 Object.values(plans).forEach(elem => {
   let newPlan = `
-          <div class=" bg-white flex justify-between items-center w-full h-40 shadow-[0_0_30px_rgba(0,0,0,0.1)] shadow-gray-100 rounded-md pl-10 pr-30">
+          <div class=" bg-white flex gap-4 justify-between items-center w-full h-40 shadow-[0_0_30px_rgba(0,0,0,0.1)] shadow-gray-100 rounded-md pl-10 md:pr-30 pr-10">
           <div>
           <span class="text-2xl font-medium">${elem.title}</span>
           <p class="font-light">${elem.desc}</p>
@@ -249,7 +256,7 @@ function createLinks(item){
   let elems= item.simpItem.map(i =>
       `<a href="#">${i}</a>`
     ).join("")
-    return`<div class="space-y-5  p-8 xl:pl-32">
+    return`<div class="space-y-5  p-8 lg:pl-32 md:pl-14">
           <h4 class="text-lg font-semibold">
             ${item.title}
           </h4>
