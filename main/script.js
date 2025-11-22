@@ -138,16 +138,16 @@ function createSec2(isYear){
     let mOry= isYear?`<div class="flex mt-6  gap-3">
               <span class="text-3xl font-semibold">$</span><h2 class="text-6xl font-bold">${elem.MY.year}</h2>
               <span class="uppercase text-2xl self-end">/month</span></div><div class=" w-full text-end">Billed yearly</div>` :
-              `<div class="flex mt-6  gap-3">
+              `<div class="flex mt-6 gap-3">
               <span class="text-3xl font-semibold">$</span><h2 class="text-6xl font-bold ">${elem.MY.month}</h2><span class="uppercase text-2xl self-end">/month</span></div>`
 
-  let newPack = `<div class="${elem.popular?`relative`:""} overflow-hidden lg:w-93 w-full min-h-230 px-10 pt-10 bg-white/84 border-gray-300 border-[0.5px] rounded-sm flex flex-col">
+  let newPack = `<div class="${elem.popular?`relative`:""} overflow-hidden lg:w-93 w-full  lg:min-h-230 px-10 pt-10 bg-white/84 border-gray-300 border-[0.5px] rounded-sm flex flex-col">
             ${elem.popular?` <div class="absolute rotate-45 top-12 left-38 font-semibold text-lg  w-70 h-10 bg-prggreen uppercase text-white text-center pt-1">most popular</div>`:""}
             <h3 class="text-2xl font-semibold">${elem.title}</h3>
             <p class="mt-1 text-sm h-15">${elem.desc}</p>
               ${mOry}
             <div class="bg-prggreen h-0.5 w-full mt-1"></div>
-            <div class="flex flex-col h-4/5 flex-none shrink-0">
+            <div class="flex flex-col  lg:h-4/5 flex-none shrink-0">
             <ul class="pt-10 space-y-5 flex-grow">
                 ${elem.features.map(f =>
     `<li class="feature-container">
@@ -169,7 +169,7 @@ function createSec2(isYear){
                     </li>`
   ).join("")}
                 </ul>
-                <button class=" bg-prggreen uppercase font-semibold rounded-md w-full h-15 my-6 text-white cursor-pointer hover:bg-emerald-600">start free</button></div>
+                <button class=" bg-prggreen uppercase font-semibold rounded-md w-full h-15 my-14 lg:my-6 text-white cursor-pointer hover:bg-emerald-600">start free</button></div>
               `
   sec2.insertAdjacentHTML("beforeend", newPack)
 });
