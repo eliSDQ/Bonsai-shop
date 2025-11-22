@@ -28,9 +28,10 @@
     
 }
 @layer base{
-  body{@apply text-gray-600}
+  body{@apply text-[#4c4d5f]}
 }
 @theme{
+     --color-prggreen:#00b289;
      --font-amerigo:"amerigo";
      --breakpoint-*: initial;
      --breakpoint-sm: 458px;
@@ -39,7 +40,7 @@
      --breakpoint-xl: 1280px;
 }
 #article-ul > li {
-  @apply cursor-pointer hover:text-emerald-500 w-fit select-none;
+  @apply cursor-pointer hover:text-prggreen w-fit select-none;
 }
 
 li>p{

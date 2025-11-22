@@ -87,7 +87,7 @@ function hoverFunc(temp){
                       <div class="absolute inset-0 flex items-center justify-center"><h5>${i}</h5></div>
                       </div>`).join("")}
                       </div>
-                      ${temp.more?`<a href="#" class="text-emerald-500 capitalize text-center text-sm block font-semibold">see all templates</a>`:""}`
+                      ${temp.more?`<a href="#" class="text-prggreen capitalize text-center text-sm block font-semibold">see all templates</a>`:""}`
     secondList.innerHTML=""
     secondList.insertAdjacentHTML("beforeend",menuStructure)
 }
@@ -141,18 +141,19 @@ function createSec2(isYear){
               `<div class="flex mt-6  gap-3">
               <span class="text-3xl font-semibold">$</span><h2 class="text-6xl font-bold ">${elem.MY.month}</h2><span class="uppercase text-2xl self-end">/month</span></div>`
 
-  let newPack = `<div class="${elem.popular?`relative`:""} overflow-hidden lg:w-93 w-full h-230 p-12 bg-white/84 border-gray-300 border-[0.5px] rounded-sm">
-            ${elem.popular?` <div class="absolute rotate-45 top-12 left-38 font-semibold text-lg  w-70 h-10 bg-emerald-500 uppercase text-white text-center pt-1">most popular</div>`:""}
+  let newPack = `<div class="${elem.popular?`relative`:""} overflow-hidden lg:w-93 w-full min-h-230 px-10 pt-10 bg-white/84 border-gray-300 border-[0.5px] rounded-sm flex flex-col">
+            ${elem.popular?` <div class="absolute rotate-45 top-12 left-38 font-semibold text-lg  w-70 h-10 bg-prggreen uppercase text-white text-center pt-1">most popular</div>`:""}
             <h3 class="text-2xl font-semibold">${elem.title}</h3>
-            <p class="mt-1 text-sm">${elem.desc}</p>
+            <p class="mt-1 text-sm h-15">${elem.desc}</p>
               ${mOry}
-            <div class="bg-emerald-500 h-0.5 w-full mt-1"></div>
-            <ul class="pt-10 space-y-5 h-138">
+            <div class="bg-prggreen h-0.5 w-full mt-1"></div>
+            <div class="flex flex-col h-4/5 flex-none shrink-0">
+            <ul class="pt-10 space-y-5 flex-grow">
                 ${elem.features.map(f =>
     `<li class="feature-container">
                         <svg
                         xmlns="http://www.w3.org/2000/svg"
-                        class="stroke-emerald-500 w-4 h-4 flex-shrink-0"
+                        class="stroke-prggreen w-4 h-4 flex-shrink-0"
                         fill="none"
                         viewBox="0 0 24 24"
                         stroke-width="3"
@@ -168,7 +169,7 @@ function createSec2(isYear){
                     </li>`
   ).join("")}
                 </ul>
-                <button class="bg-emerald-500 uppercase font-semibold rounded-md w-full h-15 my-10 text-white cursor-pointer hover:bg-emerald-600">start free</button>
+                <button class=" bg-prggreen uppercase font-semibold rounded-md w-full h-15 my-6 text-white cursor-pointer hover:bg-emerald-600">start free</button></div>
               `
   sec2.insertAdjacentHTML("beforeend", newPack)
 });
