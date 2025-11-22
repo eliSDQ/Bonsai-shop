@@ -141,10 +141,26 @@ function createSec2(isYear){
               `<div class="flex mt-6 gap-3">
               <span class="text-3xl font-semibold">$</span><h2 class="text-6xl font-bold ">${elem.MY.month}</h2><span class="uppercase text-2xl self-end">/month</span></div>`
 
-  let newPack = `<div class="${elem.popular?`relative`:""} overflow-hidden lg:w-93 w-full  lg:min-h-230 px-10 pt-10 bg-white/84 border-gray-300 border-[0.5px] rounded-sm flex flex-col">
-            ${elem.popular?` <div class="absolute rotate-45 top-12 left-38 font-semibold text-lg  w-70 h-10 bg-prggreen uppercase text-white text-center pt-1">most popular</div>`:""}
+  let newPack = `<div class="${elem.popular?`relative`:""} overflow-hidden lg:w-93 w-full  lg:min-h-232 px-10 pt-10 bg-white/84 border-gray-300 border-[0.5px] rounded-sm flex flex-col">
+            ${elem.popular?` <div class="absolute 
+              top-18 lg:left-4/5 left-8/9
+              -translate-x-1/2 
+              -translate-y-1/2
+              rotate-45
+              h-10
+              w-full
+              bg-prggreen
+              text-white 
+              font-semibold 
+              px-10 py-1 
+              whitespace-nowrap 
+              text-center
+              text-lg
+              uppercase">
+      Most Popular
+  </div>`:""}
             <h3 class="text-2xl font-semibold">${elem.title}</h3>
-            <p class="mt-1 text-sm h-15">${elem.desc}</p>
+            <p class="mt-1 text-sm h-15 w-4/5">${elem.desc}</p>
               ${mOry}
             <div class="bg-prggreen h-0.5 w-full mt-1"></div>
             <div class="flex flex-col  lg:h-4/5 flex-none shrink-0">
