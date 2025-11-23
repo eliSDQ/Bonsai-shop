@@ -12,6 +12,9 @@ let circle=$.getElementById("circle")
 let year=$.getElementById("year")
 let month=$.getElementById("month")
 let fixedNav=$.getElementById("fixednav")
+let mobileMenu=$.getElementById("mobile-menu")
+let close=$.getElementById("close")
+let hambur=$.getElementById("hambur")
 
 
 // Navbar :
@@ -123,6 +126,13 @@ window.addEventListener("scroll",()=>{
   }else{fixedNav.classList.remove("bg-white")}
 })
 
+mobileMenu.addEventListener("click",()=>{
+    hambur.classList.toggle("scale-0");
+    close.classList.toggle("scale-0");
+})
+
+
+
 
 // Main > Sec 1+2 :
 let packsArr = [
@@ -202,7 +212,6 @@ createSec2(false)
 
   createSec2(isYear)
 })
-
 
 
 // Main > Sec3 :

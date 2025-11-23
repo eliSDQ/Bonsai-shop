@@ -10,6 +10,8 @@
     .section-titles{@apply uppercase font-medium tracking-wider;}
     .off{@apply text-gray-400}
     .feature-container{@apply flex gap-1 items-baseline}
+    .icon{@apply absolute inset-0 w-full h-full transition-transform duration-550 ease-in-out
+    }
     .in-panel-titles{
       font-family: "amerigo";
       @apply text-2xl text-black}
